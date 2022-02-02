@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report DataSourceName="Headers" Width="14.817cm" UnitOfMeasure="Pixel" Name="Main" SnapGridSize="0.1cm" xmlns="http://schemas.telerik.com/reporting/2021/2.0">
+  <DataSources>
+    <SqlDataSource QueryDesignerState="null" ParameterValues="{}" ConnectionString="Data Source=(local);Initial Catalog=Athena.Receipting;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="select * from header" Name="Headers" />
+  </DataSources>
+  <Items>
+    <PageHeaderSection Height="85px" Name="pageHeaderSection1">
+      <Items>
+        <PictureBox Image="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" Width="205.99px" Height="82.02px" Left="0.265cm" Top="0cm" MimeType="image/png" Name="pictureBox1">
+          <Style Visible="True" />
+        </PictureBox>
+      </Items>
+    </PageHeaderSection>
+    <DetailSection CanShrink="True" Height="334px" Name="detailSection1">
+      <Items>
+        <TextBox Width="234.98px" Height="20px" Left="3.836cm" Top="1.164cm" Value="=Fields.PoNumber" Name="textBox1" />
+        <TextBox Width="234.98px" Height="20px" Left="3.836cm" Top="1.958cm" Value="=Fields.AuthorizedByFullName" Name="textBox2" />
+        <TextBox Width="234.98px" Height="20px" Left="3.836cm" Top="2.752cm" Value="=Fields.Status" Name="textBox3" />
+        <TextBox Width="234.98px" Height="20px" Left="3.836cm" Top="0.37cm" Value="=Fields.IbtNumber" Name="textBox4" />
+        <TextBox Width="116px" Height="20px" Left="0.528cm" Top="0.37cm" Value="IBT Number:" Name="textBox5" />
+        <TextBox Width="116px" Height="20px" Left="0.528cm" Top="1.164cm" Value="PO Number:" Name="textBox6" />
+        <TextBox Width="116px" Height="20px" Left="0.528cm" Top="1.958cm" Value="Authorized By:" Name="textBox7" />
+        <TextBox Width="116px" Height="20px" Left="0.528cm" Top="2.752cm" Value="Status:" Name="textBox8" />
+        <SubReport Width="520.02px" Height="185.02px" Left="0.528cm" Top="3.545cm" KeepTogether="False" Name="Items">
+          <ReportSource>
+            <UriReportSource Uri="Items.trdp">
+              <Parameters>
+                <Parameter Name="headerID">
+                  <Value>
+                    <String>= Parameters.headerID.Value</String>
+                  </Value>
+                </Parameter>
+              </Parameters>
+            </UriReportSource>
+          </ReportSource>
+        </SubReport>
+      </Items>
+    </DetailSection>
+    <PageFooterSection Height="40px" Name="pageFooterSection1" />
+  </Items>
+  <PageSettings PaperKind="A4" ContinuousPaper="False">
+    <Margins>
+      <MarginsU Left="20mm" Right="20mm" Top="20mm" Bottom="20mm" />
+    </Margins>
+  </PageSettings>
+  <StyleSheet>
+    <StyleRule>
+      <Style>
+        <Padding Left="2pt" Right="2pt" />
+      </Style>
+      <Selectors>
+        <TypeSelector Type="TextItemBase" />
+        <TypeSelector Type="HtmlTextBox" />
+      </Selectors>
+    </StyleRule>
+  </StyleSheet>
+  <Filters>
+    <Filter Expression="Id" Operator="Equal" Value="= Parameters.headerID.Value" />
+  </Filters>
+  <ReportParameters>
+    <ReportParameter Name="headerID" Mergeable="False" Visible="True" AllowBlank="False">
+      <Value>
+        <String>2</String>
+      </Value>
+    </ReportParameter>
+  </ReportParameters>
+</Report>

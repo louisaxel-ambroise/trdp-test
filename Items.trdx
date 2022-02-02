@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report Width="17cm" UnitOfMeasure="Pixel" SkipBlankPages="False" Name="Items" SnapGridSize="0.1cm" xmlns="http://schemas.telerik.com/reporting/2021/2.0">
+  <DataSources>
+    <SqlDataSource QueryDesignerState="null" ParameterValues="{}" ConnectionString="Data Source=(local);Initial Catalog=Athena.Receipting;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="select i.*, hu2.headerid from items i join handlingunit2 hu2 on hu2.id = i.handlingunit2id" Name="sqlDataSource1" />
+  </DataSources>
+  <Items>
+    <PageHeaderSection PrintOnFirstPage="False" PrintOnLastPage="False" Height="75px" Name="pageHeaderSection1">
+      <Style Visible="False" />
+    </PageHeaderSection>
+    <DetailSection Height="192px" Name="detailSection1">
+      <Items>
+        <Table DataSourceName="sqlDataSource1" Width="8.128cm" Height="1.016cm" Left="4.101cm" Top="1.852cm" Name="table1" StyleName="Normal.TableNormal">
+          <Body>
+            <Cells>
+              <TableCell RowIndex="0" ColumnIndex="0" RowSpan="1" ColumnSpan="1">
+                <ReportItem>
+                  <TextBox Width="76.8px" Height="19.2px" Left="0cm" Top="0cm" Value="= Fields.[DeliveryLineNumber]" Name="textBox6" StyleName="Normal.TableBody" />
+                </ReportItem>
+              </TableCell>
+              <TableCell RowIndex="0" ColumnIndex="1" RowSpan="1" ColumnSpan="1">
+                <ReportItem>
+                  <TextBox Width="76.8px" Height="19.2px" Left="0cm" Top="0cm" Value="= Fields.[AdvisedQuantity]" Name="textBox7" StyleName="Normal.TableBody" />
+                </ReportItem>
+              </TableCell>
+              <TableCell RowIndex="0" ColumnIndex="2" RowSpan="1" ColumnSpan="1">
+                <ReportItem>
+                  <TextBox Width="76.8px" Height="19.2px" Left="0cm" Top="0cm" Value="= Fields.[ActualQuantity]" Name="textBox8" StyleName="Normal.TableBody" />
+                </ReportItem>
+              </TableCell>
+              <TableCell RowIndex="0" ColumnIndex="3" RowSpan="1" ColumnSpan="1">
+                <ReportItem>
+                  <TextBox Width="76.8px" Height="19.2px" Left="0cm" Top="0cm" Value="= Fields.[Status]" Name="textBox9" StyleName="Normal.TableBody" />
+                </ReportItem>
+              </TableCell>
+            </Cells>
+            <Columns>
+              <Column Width="2.032cm" />
+              <Column Width="2.032cm" />
+              <Column Width="2.032cm" />
+              <Column Width="2.032cm" />
+            </Columns>
+            <Rows>
+              <Row Height="0.508cm" />
+            </Rows>
+          </Body>
+          <Corner />
+          <RowGroups>
+            <TableGroup Name="detail">
+              <Groupings>
+                <Grouping />
+              </Groupings>
+            </TableGroup>
+          </RowGroups>
+          <ColumnGroups>
+            <TableGroup Name="deliveryLineNumber1">
+              <ReportItem>
+                <TextBox Width="76.8px" Height="19.2px" Left="0cm" Top="0cm" Value="DeliveryLineNumber" Name="textBox2" StyleName="Normal.TableHeader" />
+              </ReportItem>
+            </TableGroup>
+            <TableGroup Name="advisedQuantity1">
+              <ReportItem>
+                <TextBox Width="76.8px" Height="19.2px" Left="0cm" Top="0cm" Value="AdvisedQuantity" Name="textBox3" StyleName="Normal.TableHeader" />
+              </ReportItem>
+            </TableGroup>
+            <TableGroup Name="actualQuantity1">
+              <ReportItem>
+                <TextBox Width="76.8px" Height="19.2px" Left="0cm" Top="0cm" Value="ActualQuantity" Name="textBox4" StyleName="Normal.TableHeader" />
+              </ReportItem>
+            </TableGroup>
+            <TableGroup Name="status1">
+              <ReportItem>
+                <TextBox Width="76.8px" Height="19.2px" Left="0cm" Top="0cm" Value="Status" Name="textBox5" StyleName="Normal.TableHeader" />
+              </ReportItem>
+            </TableGroup>
+          </ColumnGroups>
+          <Filters>
+            <Filter Expression="headerid" Operator="Equal" Value="= Parameters.headerID.Value" />
+          </Filters>
+        </Table>
+        <TextBox Width="642.52px" Height="49px" Left="0cm" Top="0cm" Value="Items" Name="textBox1">
+          <Style TextAlign="Center">
+            <Font Size="25pt" Bold="True" />
+          </Style>
+        </TextBox>
+      </Items>
+    </DetailSection>
+    <PageFooterSection Height="43px" Name="pageFooterSection1" />
+  </Items>
+  <PageSettings PaperKind="A4">
+    <Margins>
+      <MarginsU Left="20mm" Right="20mm" Top="20mm" Bottom="20mm" />
+    </Margins>
+  </PageSettings>
+  <StyleSheet>
+    <StyleRule>
+      <Style>
+        <Padding Left="2pt" Right="2pt" />
+      </Style>
+      <Selectors>
+        <TypeSelector Type="TextItemBase" />
+        <TypeSelector Type="HtmlTextBox" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style Color="Black">
+        <Font Name="Tahoma" Size="9pt" />
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+      </Style>
+      <Selectors>
+        <StyleSelector Type="Table" StyleName="Normal.TableNormal" />
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style VerticalAlign="Middle">
+        <Font Name="Tahoma" Size="10pt" />
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+      </Style>
+      <Selectors>
+        <DescendantSelector>
+          <Selectors>
+            <TypeSelector Type="Table" />
+            <StyleSelector Type="ReportItem" StyleName="Normal.TableHeader" />
+          </Selectors>
+        </DescendantSelector>
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style>
+        <Font Name="Tahoma" Size="9pt" />
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+      </Style>
+      <Selectors>
+        <DescendantSelector>
+          <Selectors>
+            <TypeSelector Type="Table" />
+            <StyleSelector Type="ReportItem" StyleName="Normal.TableGroup" />
+          </Selectors>
+        </DescendantSelector>
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style>
+        <Font Name="Tahoma" Size="10pt" />
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+      </Style>
+      <Selectors>
+        <DescendantSelector>
+          <Selectors>
+            <TypeSelector Type="Table" />
+            <StyleSelector Type="ReportItem" StyleName="Normal.TableCorner" />
+          </Selectors>
+        </DescendantSelector>
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style>
+        <Font Name="Tahoma" Size="9pt" />
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+      </Style>
+      <Selectors>
+        <DescendantSelector>
+          <Selectors>
+            <TypeSelector Type="Table" />
+            <StyleSelector Type="ReportItem" StyleName="Normal.TableBody" />
+          </Selectors>
+        </DescendantSelector>
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style>
+        <Font Name="Tahoma" Size="10pt" />
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+      </Style>
+      <Selectors>
+        <DescendantSelector>
+          <Selectors>
+            <TypeSelector Type="Table" />
+            <StyleSelector Type="ReportItem" StyleName="Normal.SubTotal" />
+          </Selectors>
+        </DescendantSelector>
+      </Selectors>
+    </StyleRule>
+    <StyleRule>
+      <Style>
+        <Font Name="Tahoma" Size="10pt" Bold="True" />
+        <BorderStyle Default="Solid" />
+        <BorderColor Default="Black" />
+        <BorderWidth Default="1px" />
+      </Style>
+      <Selectors>
+        <DescendantSelector>
+          <Selectors>
+            <TypeSelector Type="Table" />
+            <StyleSelector Type="ReportItem" StyleName="Normal.GrandTotal" />
+          </Selectors>
+        </DescendantSelector>
+      </Selectors>
+    </StyleRule>
+  </StyleSheet>
+  <ReportParameters>
+    <ReportParameter Name="headerID" Type="Integer" Mergeable="False" AllowBlank="False" AutoRefresh="True" />
+  </ReportParameters>
+</Report>
